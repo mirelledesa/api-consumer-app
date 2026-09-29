@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consumo de API con Fetch y Axios</title>
+  <link rel="stylesheet" href="styles.css">
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Consumo de Datos de API</h1>
+      
+      <section class="controls">
+        <div class="control-group">
+            <label for="apiSelector">Cliente API:</label>
+        <select id="apiSelector">
+          <option value="fetch">Usar Fetch</option>
+          <option value="axios">Usar Axios</option>
+        </select>
+        </div>
+
+        <div class="control-group">
+        <label for="searchInput">Buscar publicaciones:</label>
+        <input type="text" id="searchInput" placeholder="Escribe Aqui">
+        </div>
+
+        <button id="fetchButton">Obtener datos</button>
+      </section>
+    </header>
+
+    <main>
+      
+      <div id="loading" class="hidden">Cargando datos...</div>
+
+      <div id="error" class="error hidden"></div>
+
+      <section id="results" class="results-grid"></section>
+
+      <nav id="pagination" class="pagination-container"></nav>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
